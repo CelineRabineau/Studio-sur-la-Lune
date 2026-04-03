@@ -1,0 +1,126 @@
+/* =========================
+   BACKGROUND GLOBAL PAGE PROJET
+========================= */
+body.project-page {
+    background-image: url('assets/projets/background-projets.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: local;
+    background-size: contain;
+}
+
+/* =========================
+   PROJECT PAGE
+========================= */
+.project-hero {
+    margin-top: 100px; 
+    width: 100%;
+}
+
+.project-hero img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+    max-width: 1900px;
+}
+
+.project-info {
+  text-align: center;
+  padding: 40px 50px;
+}
+
+.project-title {
+  font-size: 70px;
+  font-weight: 900;
+  margin-bottom: 5px;
+  font-family: 'Fusain-regular', sans-serif;
+  color: white;
+}
+
+.project-techniques {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 100;
+}          
+
+/* GRID */
+.project-grid {
+  padding: 0 50px 0px 50px;
+}
+
+.grid-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.grid-left, .grid-right {
+  flex: 1; 
+  color: white;
+}
+
+.grid-left img, .grid-right img {
+  width: 100%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grid-left video, .grid-right video {
+  width:100%;
+  height:auto;
+  display:block;
+  margin-bottom:20px;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media(max-width:1024px) {
+  .grid-row {
+    flex-direction: column;
+  }
+
+  .project-info {
+    padding: 30px 20px;
+  }
+
+  .project-title {
+    font-size: 60px;
+  }
+  .project-techniques {
+    font-size: 12px;
+  }
+  .project-hero {
+    margin-top: 95px;
+    width: 100%;
+  }
+}
+
+@media(max-width:600px) {
+  .project-title {
+    font-size: 40px;
+  }
+
+  .project-info {
+    padding: 20px 15px;
+  }
+
+  .project-techniques {
+    font-size: 1px;
+  }
+
+  .grid-left img, .grid-right img {
+    margin-bottom: 15px;
+  }
+  .project-hero {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+}
