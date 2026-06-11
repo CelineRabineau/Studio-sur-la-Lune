@@ -1,19 +1,13 @@
-/* =========================
-   FONTS
-========================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;400;700;900&display=swap');
 
 @font-face {
     font-family: 'Fusain-regular';
     src: url('fonts/Fusain-Regular.otf') format('woff2'),
-         url('fonts/Fusain-Regular.otf') format('woff');
+        url('fonts/Fusain-Regular.otf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-/* =========================
-   GLOBAL
-========================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -38,9 +32,6 @@ p {
     font-weight: 400;
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
     position: absolute;
     top: 0;
@@ -73,6 +64,12 @@ header {
     font-family: 'Fusain-regular', sans-serif;
 }
 
+.logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+
 header nav a {
     margin-left: 30px;
     font-weight: 700;
@@ -85,9 +82,6 @@ header nav a:hover {
     color: #E6E6E6;
 }
 
-/* =========================
-   HERO
-========================= */
 .hero {
     position: relative;
     width: 100%;
@@ -109,9 +103,6 @@ header nav a:hover {
     color: white;
 }
 
-/* =========================
-   FILTERS
-========================= */
 .filters {
     position: absolute;
     bottom: 20px;
@@ -129,23 +120,22 @@ header nav a:hover {
     width: 100%;
     padding: 9px 5px;
     border-radius: 30px;
-    border: none;
-    background: rgba(255, 255, 255, 0.4);
     color: white;
     cursor: pointer;
     font-size: 13px;
-    transition: 0.3s;
     white-space: nowrap;
     max-width: 180px;
+    border: 1.5px solid rgba(255,255,255,0.7);
+    background: transparent;
+    transition: background 0.25s, border-color 0.25s;
 }
 
+.filters button.active,
 .filters button:hover {
     background: #283a51;
+    border-color: #283a51;
 }
 
-/* =========================
-   GRID PROJECTS
-========================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,7 +157,12 @@ header nav a:hover {
     height: 280px;
     object-fit: cover;
     display: block;
-    transform: scale(1.25);
+    transform: scale(1);
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover img {
+    transform: scale(1.07);
 }
 
 .card-title {
@@ -180,17 +175,21 @@ header nav a:hover {
     z-index: 1000;
 }
 
-.card:hover {
+.card {
     transform: translateY(-5px);
+    box-shadow: 0 2px 8px rgba(40,58,81,0.08);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(40,58,81,0.18);
 }
 
 .card.hidden {
     display: none;
 }
 
-/* =========================
-   ABOUT PAGE
-========================= */
 .about-content {
     display: flex;
     gap: 20px;
@@ -216,17 +215,19 @@ header nav a:hover {
 }
 
 .about-title {
-  font-size: 70px;
-  font-weight: 900;
-  margin-bottom: 5px;
-  font-family: 'Fusain-regular', sans-serif;
-  color: #283a51;
-  margin: 0 1em 0 1em;
+    font-size: 70px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    font-family: 'Fusain-regular', sans-serif;
+    color: #283a51;
+    margin: 0 1em 0 1em;
 }
 
-/* =========================
-   FOOTER
-========================= */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -240,9 +241,6 @@ footer .socials a {
     margin-left: 15px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 @media (max-width:1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -293,9 +291,6 @@ footer .socials a {
     }
 }
 
-/* ======================
-   MOBILE
-====================== */
 @media (max-width:600px) {
     header {
         padding: 15px 20px;
