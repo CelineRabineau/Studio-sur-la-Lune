@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll(".filters button");
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card, .blog-card");
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
@@ -12,7 +12,7 @@ buttons.forEach(button => {
       const cardCategories = card.dataset.category.split(" ");
 
       if (filter === "all" || cardCategories.includes(filter)) {
-        card.style.display = "flex";
+        card.style.display = "";
       } else {
         card.style.display = "none";
       }
@@ -29,9 +29,24 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.card').forEach(c => observer.observe(c));
+document.querySelectorAll('.card, .blog-card').forEach(c => observer.observe(c));
 
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
 }, {threshold:0.15});
 document.querySelectorAll('.grid-row').forEach(r => obs.observe(r));
+
+function openLightbox(img) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = img.src;
+  lb.classList.add('open');
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+// Fermer avec Échap
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
