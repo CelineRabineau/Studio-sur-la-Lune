@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titre article – Studio sur la Lune</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blog-article.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+</head>
+<body class="project-page">
+
+    <header>
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="assets/logo_blanc.png" alt="Studio sur la Lune - Céline Rabineau">
+        </div>
+        <nav>
+            <a href="blog.html">Blog</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+    </header>
+
+<main class="article-wrap">
+
+  <img class="article-hero" src="assets/blog/expo-main.png" alt="...">
+
+  <div class="article-meta">
+    <span class="article-date">1 juin 2026</span>
+    <div class="article-tags">
+      <span class="tag">Illustration</span>
+      <span class="tag">Aquarelle</span>
+    </div>
+  </div>
+
+  <h1 class="article-title">Prendre son envol</h1>
+  <p class="article-subtitle">Exposition chez Solo Palma Coffee House</p>
+  <hr class="article-rule">
+
+  <div class="article-body">
+
+    <aside class="article-aside">
+      <p class="aside-label">Dans cet article</p>
+      <ul class="aside-index">
+        <li>01 — L'exposition</li>
+        <li>02 — Les cartes postales</li>
+        <li>03 — La galerie</li>
+      </ul>
+      <blockquote class="aside-pull">
+        "Chaque envol commence par un premier pas hors de l’inconnu."
+      </blockquote>
+    </aside>
+
+    <div class="article-content">
+      <p class="section-label">01 — L'exposition</p>
+      <p>Prendre son envol raconte l’histoire d’une entité qui a osé quitter sa grotte immergée pour s'élever vers le soleil. 
+        Elle s'en détache peu à peu pour rejoindre un monde en mouvement, où la lumière et les courants redessinent sans cesse 
+        les paysages. À chaque avancée, de nouveaux horizons se révèlent, portés par la découverte de ce qui l'entoure.<br><br>
+        À travers cette série d'illustrations, le récit devient une métaphore de nos propres parcours. 
+        L'exposition invite à sortir de sa zone de confort, à explorer de nouvelles directions et à accueillir 
+        les rencontres et les expériences qui enrichissent notre chemin.</p>
+      <img src="assets/blog/expo-milieu.png" alt="...">
+      <p class="img-caption">Deux des cartes postales créées pour l’exposition.</p>
+      <p class="section-label">02 — Les cartes postales</p>
+      <p>Prendre son envol se prolonge à travers une série de cartes postales uniques, qui dévoilent 
+        d’autres instants de cette exploration. En les emportant ou en les partageant, les visiteurs 
+        sont invités à faire voyager à leur tour ce récit de découverte et de renouveau, 
+        et à transmettre l’idée que chaque envol commence par un premier pas hors de l’inconnu.</p>
+
+      <div class="article-gallery">
+        <p class="aside-label">Galerie</p>
+        <div class="gallery-grid">
+          <img src="assets/blog/expo1.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo2.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo3.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo4.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo5.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo6.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo7.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo8.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo9.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo10.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo11.jpg" alt="" onclick="openLightbox(this)">
+          <img src="assets/blog/expo12.jpg" alt="" onclick="openLightbox(this)">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+    </div>
+</main>
+
+<footer>
+  <div>Céline Rabineau – 2026</div>
+    <div class="socials">
+      <a href="https://www.instagram.com/studio.surlalune/"><img src="assets/instagram.png" alt="Instagram" width="20"></a>
+      <a href="https://www.linkedin.com/in/celinrab"><img src="assets/linkedin.png" alt="LinkedIn" width="20"></a>
+      <a href="https://github.com/CelineRabineau"><img src="assets/github.png" alt="GitHub" width="20"></a>
+    </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
