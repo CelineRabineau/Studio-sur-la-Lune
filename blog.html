@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Studio sur la Lune</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
 </head>
 <body>
     <header>
@@ -20,27 +23,34 @@
     <section class="hero">
         <img src="assets/hero-projets-3.png" alt="Projets">
         <div class="hero-text">BLOG</div>
-        <!--<div class="filters">
+        <div class="filters">
             <button class="active" data-category="all">Tous</button>
             <button data-category="design">Design</button>
-            <button data-category="podcast">Podcast</button>
+            <button data-category="Illustration">Illustration</button>
             <button data-category="livre">Livres</button>
             <button data-category="recette">Recette</button>
             <button data-category="photographie">Photographie</button>
-        </div> -->
+        </div>
     </section>
 
-    <section class="grid">
-        <p>Revenez plus tard pour découvrir mes articles!</p>
-        <!--<a href="l'herbier-irrel.html" class="card" data-category="graphisme">
-            <img src="assets/herbier-card.png" alt="L'herbier irréel">
-            <div class="card-title">L'herbier irréel</div>
+    <section class="blog-grid">
+        <a href="expo-solopalma.html" class="blog-card" data-category="Illustration">
+            <img src="assets/pse-card.png" alt="Prendre son envol">
+            <div class="blog-card-overlay">
+            <span class="blog-card-date">1 juin 2026</span>
+            <div class="blog-card-title">Prendre son envol</div>
+            <div class="blog-card-sub">Exposition chez Solo Palma Coffee House</div>
+            </div>
         </a>
-        <a href="particule.html" class="card" data-category="creative-coding">
-            <img src="assets/particule.png" alt="Particules">
-            <div class="card-title">Particule</div>
-        </a>-->
-    </section>
+        <a href="jardins-roquelin.html" class="blog-card" data-category="photographie">
+            <img src="assets/jdm-card.png" alt="Les jardins de Meung">
+            <div class="blog-card-overlay">
+            <span class="blog-card-date">14 juin 2026</span>
+            <div class="blog-card-title">Les jardins de Meung-sur-Loire</div>
+            <div class="blog-card-sub">Les jardins de Roquelin et le jardin d'arboretum d'Ilex</div>
+            </div>
+        </a>
+        </section>
 
     <footer>
         <div>Céline Rabineau – 2026</div>
