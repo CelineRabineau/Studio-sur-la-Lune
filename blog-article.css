@@ -209,4 +209,9 @@ header {
   .article-aside { position: static; display: flex; flex-wrap: wrap; gap: 20px; }
   .article-title { font-size: 36px; }
   .article-wrap { padding: 100px 20px 60px; }
+  .article-hero {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    margin-top: 20px;
+  }
 }
