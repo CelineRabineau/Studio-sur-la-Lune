@@ -218,6 +218,14 @@ header nav a:hover {
     display: none;
 }
 
+.card-wide {
+  grid-column: 1 / -1;
+}
+
+.card-wide img {
+  height: 150px;
+}
+
 .about-wrap {
   padding: 120px 80px 80px;
 }
@@ -350,6 +358,9 @@ header nav a:hover {
   .about-wrap { padding: 100px 40px 60px; }
   .about-grid { gap: 40px; }
   .about-title { font-size: 44px; }
+  .card-wide img {
+    height: 130px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -358,6 +369,9 @@ header nav a:hover {
   .about-image img { position: static; width: 70%; margin: 0 auto; }
   .about-title { font-size: 36px; }
   .skills-grid { grid-template-columns: 1fr; }
+  .card-wide img {
+    height: 110px;
+  }
 }
 
 /* BLOG CARDS */
