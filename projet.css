@@ -136,6 +136,15 @@ header {
   border-radius: 10px;
 }
 
+.grid-right a {
+  font-weight: 700;
+}
+
+.titre {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
 @media(max-width:1024px) {
   .grid-row { flex-direction: column; }
   .project-info { padding: 35px 20px; }
